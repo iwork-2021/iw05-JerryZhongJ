@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7124694A273994F3000929DA /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71246949273994F3000929DA /* BoundingBoxView.swift */; };
 		7B0EB8AA2052A38A00EB567E /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EB8A92052A38A00EB567E /* VideoCapture.swift */; };
 		7B11BA832048333700D790AA /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */; };
 		7BF6C660204818EC00606217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6C65F204818EC00606217 /* AppDelegate.swift */; };
@@ -15,10 +14,10 @@
 		7BF6C665204818EC00606217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C663204818EC00606217 /* Main.storyboard */; };
 		7BF6C667204818ED00606217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C666204818ED00606217 /* Assets.xcassets */; };
 		7BF6C66A204818ED00606217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C668204818ED00606217 /* LaunchScreen.storyboard */; };
+		7CF7CC5A2775C55E005F2B49 /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7CC592775C55E005F2B49 /* BoundingBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71246949273994F3000929DA /* BoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBoxView.swift; path = ../../../../../../iOS2021/Assignments/iw05555/SnackLocalization/SnackLocalization/BoundingBoxView.swift; sourceTree = "<group>"; };
 		7B0EB8A92052A38A00EB567E /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		7BF6C65C204818EC00606217 /* ObjectDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +27,7 @@
 		7BF6C666204818ED00606217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF6C669204818ED00606217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF6C66B204818ED00606217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF7CC592775C55E005F2B49 /* BoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			children = (
 				7BF6C65F204818EC00606217 /* AppDelegate.swift */,
 				7BF6C661204818EC00606217 /* ViewController.swift */,
-				71246949273994F3000929DA /* BoundingBoxView.swift */,
+				7CF7CC592775C55E005F2B49 /* BoundingBoxView.swift */,
 				7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */,
 				7B0EB8A92052A38A00EB567E /* VideoCapture.swift */,
 				7BF6C663204818EC00606217 /* Main.storyboard */,
@@ -146,7 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF6C662204818EC00606217 /* ViewController.swift in Sources */,
-				7124694A273994F3000929DA /* BoundingBoxView.swift in Sources */,
+				7CF7CC5A2775C55E005F2B49 /* BoundingBoxView.swift in Sources */,
 				7B0EB8AA2052A38A00EB567E /* VideoCapture.swift in Sources */,
 				7BF6C660204818EC00606217 /* AppDelegate.swift in Sources */,
 				7B11BA832048333700D790AA /* CGImagePropertyOrientation.swift in Sources */,
