@@ -40,8 +40,8 @@ class ViewController: UIViewController {
 
   lazy var visionModel: VNCoreMLModel = {
     do {
-//        let coreMLWrapper = SnackLocalizationModel()
-      let coreMLWrapper = SnackDetector()
+//        let coreMLWrapper = SnackLocalizationModel()+
+      let coreMLWrapper = try SnackDetector(configuration: MLModelConfiguration())
       let visionModel = try VNCoreMLModel(for: coreMLWrapper.model)
 
       if #available(iOS 13.0, *) {
@@ -180,11 +180,47 @@ class ViewController: UIViewController {
   }
 
   func processObservations(for request: VNRequest, error: Error?) {
-    //call show function
+      guard error == nil else {
+          print("error")
+          return
+      }
+      guard let results = request.results as? [VNRecognizedObjectObservation] else{
+          print("Can not cast")
+          return
+      }
+      show(predictions: results)
   }
 
   func show(predictions: [VNRecognizedObjectObservation]) {
-   //process the results, call show function in BoundingBoxView
+      var i = 0
+//      print("len: \(predictions.count)")
+      for result in predictions{
+          if(i >= maxBoundingBoxViews){
+              break
+          }
+          let label = result.labels[0]
+          let id = label.identifier
+          let confidence = label.confidence
+          let boundingBox = VNImageRectForNormalizedRect(result.boundingBox, 720, 1280)
+          let labelStr = "\(id): \(Int(confidence * 100))%"
+          print("\(id): \(boundingBox)")
+          
+          let bboxView = boundingBoxViews[i]
+          DispatchQueue.main.async {
+              bboxView.show(frame: boundingBox, label: labelStr, color: self.colors[id]!)
+          }
+          i += 1
+          
+      }
+      
+      for j in i ..< maxBoundingBoxViews{
+          let bboxView = boundingBoxViews[j]
+          DispatchQueue.main.async {
+              bboxView.hide()
+          }
+          
+      }
+  }
 }
 
 extension ViewController: VideoCaptureDelegate {
